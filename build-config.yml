@@ -1,0 +1,34 @@
+#
+# config:
+# -   name: < Name of the job, foo/bar would create job named bar inside folder foo >
+#     build:
+#     - work-dir: < Working directory of the app to be built >
+#       dockerfile: < Path to the dockerfile, optional, assumes dockerfile in working directory if not provided >
+#       image-name: < Docker image name  >
+# -
+# -
+
+config:
+-   name: builds/BackendBB/Qibb
+    build:
+    - work-dir: BackendBB/Qibb
+      dockerfile: BackendBB/Qibb/Dockerfile
+      image-name: Qibb
+
+-   name: builds/BackendBB/Qicore
+    build:
+    - work-dir: BackendBB/Qicore
+      dockerfile: BackendBB/Qicore/Dockerfile
+      image-name: Qicore
+
+-   name: builds/BuildingBlocks/DataJoinBuidingBlock
+    build:
+    - work-dir: BuildingBlocks/DataJoinBuidingBlock
+      dockerfile: BuildingBlocks/DataJoinBuidingBlock/Dockerfile
+      image-name: DataJoinBuidingBlock
+
+-   name: builds/BuildingBlocks/getDataInformation
+    build:
+    - work-dir: BuildingBlocks/getDataInformation
+      dockerfile: BuildingBlocks/getDataInformation/Dockerfile
+      image-name: getDataInformation
